@@ -1,45 +1,12 @@
 import React from 'react'
+import { nike, esprit, appleWatch, newBalance, arm, health } from '../assets/img';
+import { Header } from '../components';
 
 export const HomePage = () => {
   return (
     <>
       <section className="hero">
-        <header className="header">
-            <div className="header-fixed">
-                <div className="header-navbar container">
-                    <a href="" className="header-logo"><img src="img/logo.png" alt="logo"/></a>
-                    <nav className="nav">
-                        <ul className="menu">
-                            <li className="item">
-                                <a className="link">Home</a>
-                            </li>
-                            <li className="item">
-                                <a href="programs.html" className="link">Programs</a>
-                            </li>
-                            <li className="item">
-                                <a href="trainnig.html" className="link">Trainers</a>
-                            </li>
-                            <li className="item">
-                                <a href="membership.html" className="link">Membership</a>
-                            </li>
-                            <li className="item">
-                                <a href="contact.html" className="link">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div className="header-block">
-                        <a href="" className="cart">
-                            <img src="img/cart.svg" alt="cart"/>
-                        </a>
-                        <div className="acuont">
-                            <a href="" className="link" id="login">Log In</a>
-                            <a href="" className="link" id="singup">Sign Up</a>
-                        </div>
-                    </div>
-                    <div className="burger"></div>
-                </div>
-            </div>
-        </header>
+        <Header/>
         <div class="container">
             <div class="hero-midle">
                 <div class="hero-content">
@@ -51,21 +18,21 @@ export const HomePage = () => {
                     <div class="hero-brand">
                         <span>Supported by:</span>
                         <div class="hero-brend-img">
-                            <img src="img/nike.svg" alt=""/>
-                            <img src="img/esprit.svg" alt=""/>
-                            <img src="img/apple-watch.svg" alt=""/>
-                            <img src="img/new-balance.svg" alt=""/>
+                            <img src={nike} alt=""/>
+                            <img src={esprit} alt=""/>
+                            <img src={appleWatch} alt=""/>
+                            <img src={newBalance} alt=""/>
                         </div>
                     </div>
                 </div>
                 <div class="rate">
                     <div class="rate-muscle">
-                        <img src="img/arm.svg" alt="arm"/>
+                        <img src={arm} alt="arm"/>
                         <span class="title">Muscle Rate</span>
                         <span class="text">2.861</span>
                     </div>
                     <div class="rate-heart">
-                        <img src="img/health.svg" alt="health"/>
+                        <img src={health} alt="health"/>
                         <span class="title">Heart Rate</span>
                         <span class="text">9281 bpm</span>
                     </div>
