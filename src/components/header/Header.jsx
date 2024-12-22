@@ -1,5 +1,6 @@
 import React from 'react'
 import { logo, cart } from '../../assets/img/index';
+import Nav from '../nav/Nav' 
 
 const Header = () => {
     return (
@@ -8,7 +9,7 @@ const Header = () => {
                 <div className="header-fixed">
                     <div className="header-navbar container">
                         <a href="" className="header-logo"><img src={logo} alt="logo" /></a>
-                        
+                        <Nav/>
                         <div className="header-block">
                             <a href="" className="cart">
                                 <img src={cart} alt="cart" />
