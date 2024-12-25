@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { logo, cart } from '../../assets/img/index';
-import Nav from '../nav/Nav' 
+import Nav from '../nav/Nav'
+import { IoIosMenu, IoIosClose } from "react-icons/io";
 
 const Header = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
     return (
         <>
             <header className="header">
                 <div className="header-fixed">
                     <div className="header-navbar container">
                         <a href="" className="header-logo"><img src={logo} alt="logo" /></a>
-                        <Nav/>
+                        <Nav
+                            isMenuOpen={isMenuOpen}
+                        />
                         <div className="header-block">
                             <a href="" className="cart">
                                 <img src={cart} alt="cart" />
@@ -19,7 +29,9 @@ const Header = () => {
                                 <a href="" className="link" id="singup">Sign Up</a>
                             </div>
                         </div>
-                        <div className="burger"></div>
+                        <div className="burger" onClick={toggleMenu}>
+                            {isMenuOpen ? <IoIosClose/> : <IoIosMenu />}
+                        </div>
                     </div>
                 </div>
             </header>

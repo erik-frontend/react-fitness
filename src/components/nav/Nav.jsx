@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = ({isMenuOpen}) => {
     const navItems = [
         {
             name:"Home",
@@ -26,7 +26,7 @@ const Nav = () => {
     ]
     return (
         <>
-            <nav className="nav">
+            <nav className={isMenuOpen ? "nav active" : "nav"}>
                 <ul className="menu">
 
                     {navItems.map((item, index) => (

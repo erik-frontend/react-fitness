@@ -6,6 +6,9 @@ import appleWatch from "./apple-watch.svg"
 import newBalance from "./new-balance.svg"
 import arm from "./arm.svg"
 import health from "./health.svg"
+import workout from "./workout.svg"
+import diet from "./diet.svg"
+
 
 export {
     logo,
@@ -16,4 +19,6 @@ export {
     newBalance,
     arm,
     health,
+    workout,
+    diet,
 }
