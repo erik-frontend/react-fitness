@@ -17,7 +17,7 @@ const Nav = () => {
         },
         {
             name:"Membership",
-            path:"/meerbership"
+            path:"/merbership"
         },
         {
             name:"Contact",
