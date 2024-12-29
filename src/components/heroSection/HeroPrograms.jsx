@@ -3,13 +3,20 @@ import { programs } from '../../data/programs'
 import ProgramBlock from './ProgramBlock'
 
 const HeroPrograms = () => {
+  const [activeIndex, setActiveIndex] = useState(1)
 
+  const handleBlockClick = index => {
+    setActiveIndex(index)
+  }
 
   return (
     <div className="hero-bottom container">
       <div className="hero-program">
         {programs.map((program, index) => (
-          <ProgramBlock key={index} {...program}/>
+          <ProgramBlock key={index} {...program} 
+            isActive={activeIndex === index}
+            onClick={() => handleBlockClick(index)}
+          />
         ))}
         
       </div>

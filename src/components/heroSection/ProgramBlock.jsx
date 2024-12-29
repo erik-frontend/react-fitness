@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ProgramBlock = ({title, description, link, isActive, icon}) => {
+const ProgramBlock = ({title, description, link, isActive, icon, onClick}) => {
   return (
     <>
-      <div className={`program-block ${isActive ? "active" : ""}`}>
+      <div className={`program-block ${isActive ? "active" : ""}`} onClick={onClick}>
         <div className="icon-plaseholder">
           <img src={icon} alt={title} />
         </div>

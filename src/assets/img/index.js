@@ -8,6 +8,9 @@ import arm from "./arm.svg"
 import health from "./health.svg"
 import workout from "./workout.svg"
 import diet from "./diet.svg"
+import heartIcon from "./heart-checkmark.svg"
+import offerImg1 from "./offer-img.jpg"
+import offerImg2 from "./offer-img-2.jpg"
 
 
 export {
@@ -21,4 +24,7 @@ export {
     health,
     workout,
     diet,
+    heartIcon,
+    offerImg1,
+    offerImg2,
 }

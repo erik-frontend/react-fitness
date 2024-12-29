@@ -8,8 +8,8 @@ const HeroSection = () => {
     return (
         <section className='hero'>
             <Header/>
-            <div class="container">
-                <div class="hero-midle">
+            <div className="container">
+                <div className="hero-midle">
                     <HeroContent/>
                     <HeroRate/>
                 </div>
