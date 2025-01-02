@@ -1,0 +1,126 @@
+.footer {
+    background: #08172D;
+    color: #AEAEB2;
+  
+    &-top {
+      display: flex;
+      gap: 83px;
+      padding: 120px 0 96px;
+      flex-wrap: wrap;
+  
+      &-block {
+        @media (max-width: 450px) {
+          flex: 1;
+        }
+      }
+    }
+  
+    &-logo {
+      display: block;
+      max-width: 123px;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  
+    &-text {
+      max-width: 363px;
+      width: 100%;
+      font-family: "GeneralSans-Regular";
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+  
+    &-menu {
+      display: flex;
+      gap: 40px 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 296px;
+  
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+      }
+    }
+  
+    &-form {
+      max-width: 366px;
+      width: 100%;
+  
+      @media (max-width: 450px) {
+        max-width: 100%;
+      }
+  
+      .form-title {
+        display: block;
+        color: #8E8E93;
+        margin-bottom: 16px;
+      }
+  
+      &-block {
+        display: flex;
+        gap: 16px;
+  
+        @media (max-width: 450px) {
+          flex-direction: column;
+        }
+  
+        input {
+          width: 247px;
+          background: rgba(255, 255, 255, 0.12);
+          border-radius: 32px;
+          padding: 16px 32px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCBCB;
+  
+          @media (max-width: 450px) {
+            width: 100%;
+          }
+        }
+      }
+  
+      .form-btn {
+        background: #BCFF5E;
+        border-radius: 32px;
+        width: 103px;
+        padding: 16px 0;
+        text-align: center;
+        color: #1C1C1E;
+  
+        @media (max-width: 450px) {
+          width: 100%;
+        }
+      }
+    }
+  
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 400;
+      padding: 24px 0;
+      flex-wrap: wrap;
+      gap: 30px;
+  
+      &-menu {
+        display: flex;
+        gap: 40px;
+      }
+  
+      .footer-copyright {
+        color: #AEAEB2;
+      }
+  
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  
+    .footer-bottom-link {
+      color: #C5C5C5;
+    }
+  }
+  

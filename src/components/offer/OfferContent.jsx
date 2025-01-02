@@ -1,6 +1,8 @@
 import React from 'react'
 
-const OfferContent = ({ icon, title, listItems, buttonText }) => {
+const OfferContent = ({ icon, title, listItems, buttonText, checked }) => {
+    console.log(checked);
+    
     return (
         <>
             <div className="offer-content">
@@ -10,7 +12,9 @@ const OfferContent = ({ icon, title, listItems, buttonText }) => {
                 <span className="title">{title}</span>
                 <ul className="offer-list">
                     {listItems.map((item, index) => (
-                        <li className="offer-item" key={index}>{item}</li>
+                        <li className="offer-item" key={index}>
+                            <img src={checked} alt="CheckedIcon" className='offer-icon'/>
+                            {item}</li>
                     ))}
                 </ul>
                 <button className="btn offer-btn">{buttonText}</button>

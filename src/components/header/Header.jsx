@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { logo, cart } from '../../assets/img/index';
 import Nav from '../nav/Nav'
 import { IoIosMenu, IoIosClose } from "react-icons/io";
+import "./header.scss"
 
 const Header = () => {
 

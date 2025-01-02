@@ -11,6 +11,7 @@ import diet from "./diet.svg"
 import heartIcon from "./heart-checkmark.svg"
 import offerImg1 from "./offer-img.jpg"
 import offerImg2 from "./offer-img-2.jpg"
+import checkedIcon from "./checkes.svg"
 
 
 export {
@@ -27,4 +28,5 @@ export {
     heartIcon,
     offerImg1,
     offerImg2,
+    checkedIcon,
 }

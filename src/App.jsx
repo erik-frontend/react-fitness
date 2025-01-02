@@ -1,7 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom"
 import { HomePage } from "./pages"
 import { Layout } from "./components/layout/Layout"
-
+import "./styles/main.scss"
 
 
 function App() {

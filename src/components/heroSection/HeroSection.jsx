@@ -3,6 +3,7 @@ import Header from '../header/Header';
 import HeroContent from './HeroContent';
 import HeroRate from './HeroRate';
 import HeroPrograms from './HeroPrograms';
+import "./hero.scss"
 
 const HeroSection = () => {
     return (

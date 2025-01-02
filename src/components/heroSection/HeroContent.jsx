@@ -8,7 +8,7 @@ const HeroContent = () => {
       <p className="hero-text">It doesn’t matter if your goal is to get stronger, burn fat, or to just stay
         fit
         our world class coaches will guide you every step of the way.</p>
-      <a href="" className="hero-link">Book a className</a>
+      <a href="" className="hero-link">Book a Class</a>
       <div className="hero-brand">
         <span>Supported by:</span>
         <div className="hero-brend-img">

@@ -1,6 +1,7 @@
 import React from 'react'
 import OfferBlock from './OfferBlock'
 import { offers } from '../../data/offers'
+import "./offer.scss"
 
 const Offer = () => {
     return (
