@@ -914,79 +914,9 @@
   
   /* End Offer */
   
-  .membership {
-    padding: 120px 0;
-  }
-  .membership-title {
-    max-width: 776px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .membership-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 43px;
-    flex-wrap: wrap;
-  }
-  .membership-plan {
-    padding: 40px 35px;
-    background: #FFF;
-    border: 1px solid #E9EBED;
-    border-radius: 20px;
-    width: 320px;
-    color: #1C1C1E;
-    transition: 0.3s linear;
-    cursor: pointer;
-  }
-  .membership-plan.active {
-    background: #064BB4;
-    color: #FFFFFF;
-  }
-  .membership-plan.active .membership-item {
-    background: url(../assets/img/checked-active.svg) no-repeat left center;
-  }
-  .membership-plan.active .plan {
-    color: #FFFFFF;
-  }
-  .membership-plan .price {
-    display: block;
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 12px;
-  }
-  .membership-plan .price small {
-    font-size: 16px;
-    line-height: 24px;
-    color: #AEAEB2;
-  }
-  .membership-plan .plan {
-    display: block;
-    font-size: 20px;
-    line-height: 28px;
-    color: #064BB4;
-  }
-  .membership-list {
-    margin: 32px 0;
-  }
-  .membership-item {
-    padding-left: 40px;
-    font-size: 15px;
-    line-height: 28px;
-    background: url(../assets/img/checkes.svg) no-repeat left center;
-  }
-  .membership-item:not(:last-child) {
-    margin-bottom: 24px;
-  }
-  .membership-btn {
-    padding: 12px 16px;
-    text-align: center;
-    width: 100%;
-    background: #BCFF5E;
-    border-radius: 20px;
-    font-size: 14px;
-    line-height: 22px;
-  }
+ /* membership */
+
+  /* End Membership */
   
   .review {
     padding: 120px 0 184px;

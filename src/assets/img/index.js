@@ -12,6 +12,7 @@ import heartIcon from "./heart-checkmark.svg"
 import offerImg1 from "./offer-img.jpg"
 import offerImg2 from "./offer-img-2.jpg"
 import checkedIcon from "./checkes.svg"
+import checkedIconActive from "./checked.svg"
 
 
 export {
@@ -29,4 +30,5 @@ export {
     offerImg1,
     offerImg2,
     checkedIcon,
+    checkedIconActive,
 }

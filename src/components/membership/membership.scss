@@ -1,0 +1,90 @@
+.membership {
+    padding: 120px 0;
+
+    &-title {
+        max-width: 776px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 43px;
+        flex-wrap: wrap;
+    }
+
+    &-plan {
+        padding: 40px 35px;
+        background: #FFF;
+        border: 1px solid #E9EBED;
+        border-radius: 20px;
+        width: 320px;
+        color: #1C1C1E;
+        transition: 0.3s linear;
+        cursor: pointer;
+
+        &.active {
+            background: #064BB4;
+            color: #FFFFFF;
+
+
+            .plan {
+                color: #FFFFFF;
+            }
+        }
+
+        .price {
+            display: block;
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 12px;
+
+            small {
+                font-size: 16px;
+                line-height: 24px;
+                color: #AEAEB2;
+            }
+        }
+
+        .plan {
+            display: block;
+            font-size: 20px;
+            line-height: 28px;
+            color: #064BB4;
+        }
+
+        
+
+        
+    }
+
+    &-btn {
+        padding: 12px 16px;
+        text-align: center;
+        width: 100%;
+        background: #BCFF5E;
+        border-radius: 20px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    &-list {
+        margin: 32px 0;
+
+        
+    }
+    
+    &-item {
+            font-size: 15px;
+            line-height: 28px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+}
