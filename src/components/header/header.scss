@@ -1,4 +1,6 @@
 .header {
+    height: 88px;
+    
     .burger {
         display: none;
 
@@ -21,7 +23,7 @@
         }
     }
 
-    height: 88px;
+    
 
     @media (max-width: 590px) {
         height: 140px;

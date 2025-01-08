@@ -32,7 +32,7 @@ export const membershipPlan = [
         features: [
           "20 classes per month",
           "All in Intermediate package",
-          "Access to my online tutorials",
+          "Access to my tutorials",
         ],
         listIcon: checkedIcon,
         activeListIcon: checkedIconActive,
