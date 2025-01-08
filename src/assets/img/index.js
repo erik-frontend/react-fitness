@@ -13,6 +13,7 @@ import offerImg1 from "./offer-img.jpg"
 import offerImg2 from "./offer-img-2.jpg"
 import checkedIcon from "./checkes.svg"
 import checkedIconActive from "./checked.svg"
+import review from "./review.png"
 
 
 export {
@@ -31,4 +32,5 @@ export {
     offerImg2,
     checkedIcon,
     checkedIconActive,
+    review,
 }

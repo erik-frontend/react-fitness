@@ -1,0 +1,126 @@
+.review {
+    padding: 120px 0 184px;
+  
+    .review-title {
+      width: 317px;
+      margin: 0 auto 48px;
+    }
+  
+    .slider-wrapper {
+      max-width: 604px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        left: -56px;
+        top: 0;
+        width: 56px;
+        height: 56px;
+        background: url(../../assets/img/quote-up.svg) no-repeat center;
+  
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+  
+      .slider-subtitle {
+        font-size: 14px;
+        line-height: 22px;
+        color: #aeaeb2;
+      }
+  
+      .slider-text {
+        margin: 16px 0 32px;
+        font-family: "GeneralSans-Regular";
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        color: #1c1c1e;
+      }
+  
+      .slider-avatar {
+        position: relative;
+        padding-left: 68px;
+        height: 56px;
+  
+        figure {
+          position: absolute;
+          left: 0;
+        }
+  
+        .avatar-name {
+          display: block;
+          font-size: 16px;
+          line-height: 24px;
+          color: #000000;
+          margin-bottom: 5px;
+        }
+  
+        .avatar-job {
+          display: block;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #000000;
+        }
+      }
+    }
+  
+    .slick-btn {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: -56px;
+      transition: 0.3s linear;
+  
+      &.slick-next {
+        right: 42%;
+        background: url(../assets/img/arrow-right.svg) no-repeat center;
+  
+        &.active {
+          background: url(../assets/img/arrow-big-right.svg) no-repeat center;
+        }
+      }
+  
+      &.slick-prev {
+        left: 42%;
+        background: url(../assets/img/arrow-left.svg) no-repeat center;
+  
+        &.active {
+          background: url(../assets/img/arrow-big-left.svg) no-repeat center;
+        }
+      }
+    }
+  
+    .slick-dots {
+      display: flex !important;
+      gap: 5px;
+      position: absolute;
+      bottom: -44px;
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: center;
+  
+      li button{
+        font-size: 0;
+        line-height: 0;
+        width: 8px;
+        height: 8px;
+        background: #e9ebed;
+        transition: 0.3s linear;
+  
+        &.slick-active button {
+          width: 16px;
+          border-radius: 8px;
+          background: #064bb4;
+        }
+      }
+    }
+  }
+  

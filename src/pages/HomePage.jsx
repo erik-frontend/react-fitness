@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeroSection, Membership, Offer } from '../components/index';
+import { HeroSection, Membership, Offer, Review } from '../components/index';
 
 export const HomePage = () => {
   return (
@@ -7,6 +7,7 @@ export const HomePage = () => {
         <HeroSection />
         <Offer/>
         <Membership/>
+        <Review/>
     </>
   )
 }
