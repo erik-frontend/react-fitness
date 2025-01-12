@@ -14,6 +14,11 @@ import offerImg2 from "./offer-img-2.jpg"
 import checkedIcon from "./checkes.svg"
 import checkedIconActive from "./checked.svg"
 import review from "./review.png"
+import arowBigLeft from "./arrow-big-left.svg"
+import arowBigRight from "./arrow-big-right.svg"
+import arowLeft from "./arrow-left.svg"
+import arowRight from "./arrow-right.svg"
+
 
 
 export {
@@ -33,4 +38,9 @@ export {
     checkedIcon,
     checkedIconActive,
     review,
+    arowBigLeft,
+    arowBigRight,
+    arowLeft,
+    arowRight,
+    
 }

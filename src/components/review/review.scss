@@ -106,6 +106,7 @@
       left: 50%;
       transform: translateX(-50%);
       justify-content: center;
+      z-index: 4;
   
       li button{
         font-size: 0;
@@ -115,11 +116,13 @@
         background: #e9ebed;
         transition: 0.3s linear;
   
-        &.slick-active button {
-          width: 16px;
-          border-radius: 8px;
-          background: #064bb4;
-        }
+       
+      }
+
+      li.slick-active button {
+        width: 16px;
+        border-radius: 8px;
+        background: #064bb4;
       }
     }
   }

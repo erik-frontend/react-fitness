@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { reviews } from '../../data/reviewData'
 import SliderBlock from './SliderBlock'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "./review.scss"
+import { CustomNextArrow, CustomPrevArrow } from './CustomArrows';
 
 const Review = () => {
+
+    const [isNextActive, setIsNextActive] = useState(false)
 
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        prevArrow: <CustomPrevArrow isNextActive={isNextActive} setIsNextActive={setIsNextActive}/>,
+        nextArrow: <CustomNextArrow isNextActive={isNextActive} setIsNextActive={setIsNextActive}/>
       };
 
     return (
