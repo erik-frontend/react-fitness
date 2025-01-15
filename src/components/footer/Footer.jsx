@@ -1,7 +1,37 @@
 import React from 'react'
 import "./footer.scss"
+import { footerLogo } from '../../assets/img'
+import FooterSocial from './FooterSocial'
+
 
 const Footer = () => {
+
+    const menuItems = [
+        {
+            href: "#",
+            label: "Terms of Service"
+        },
+        {
+            href: "#",
+            label: "Privacy Policy"
+        }
+    ]
+
+    const footerMenu = [
+        {
+            href: "#",
+            label: "program"
+        },
+        {
+            href: "#",
+            label: "Payment"
+        },
+        {
+            href: "#",
+            label: "about us"
+        },
+    ]
+
     return (
         <>
             <footer className="footer">
@@ -9,59 +39,38 @@ const Footer = () => {
                     <div className="footer-top">
                         <div className="footer-top-block">
                             <span className="footer-logo">
-                                <img src="img/footer-logo.svg" alt="logo"/></span>
+                                <img src={footerLogo} alt="logo" /></span>
                             <p className="footer-text">Get fit, stay healthy, and live life on their terms without fitness being an
                                 obstacle.</p>
                         </div>
                         <div className="footer-top-block">
                             <ul className="footer-menu">
-                                <li className="footer-item">
-                                    <a href="program.html" className="footer-link">program</a>
+                                {footerMenu.map((item, index) => (
+                                    <li className="footer-item">
+                                    <a target='_blank' href={item.href} className="footer-link">{item.label}</a>
                                 </li>
-                                <li className="footer-item">
-                                    <a href="payment.html" className="footer-link">Payment</a>
-                                </li>
-                                <li className="footer-item">
-                                    <a href="about-us.html" className="footer-link">about us</a>
-                                </li>
+                                ))}
                             </ul>
                         </div>
                         <div className="footer-top-block">
                             <form action="" className="footer-form">
                                 <span className="form-title">Newsletter</span>
                                 <div className="footer-form-block">
-                                    <input type="email" placeholder="Your email here"/>
-                                        <button className="btn form-btn">Send</button>
+                                    <input type="email" placeholder="Your email here" />
+                                    <button className="btn form-btn">Send</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <span className="footer-copyright">© 2023 Nguli® Global Inc.</span>
-                        <div className="social">
-                            <a href="" className="social-link">
-                                <img src="img/fb.svg" alt="icon"/>
-                            </a>
-                            <a href="" className="social-link">
-                                <img src="img/in.svg" alt="icon"/>
-                            </a>
-                            <a href="" className="social-link">
-                                <img src="img/tw.svg" alt="icon"/>
-                            </a>
-                            <a href="" className="social-link">
-                                <img src="img/yt.svg" alt="icon"/>
-                            </a>
-                            <a href="" className="social-link">
-                                <img src="img/insta.svg" alt="icon"/>
-                            </a>
-                        </div>
+                        <span className="footer-copyright">© {new Date().getFullYear()} Nguli® Global Inc.</span>
+                        <FooterSocial />
                         <ul className="footer-bottom-menu">
-                            <li className="footer-bottom-item">
-                                <a href="" className="footer-bottom-link">Terms of Service</a>
-                            </li>
-                            <li className="footer-bottom-item">
-                                <a href="" className="footer-bottom-link">Privacy Policy</a>
-                            </li>
+                            {menuItems.map((item, index) => (
+                                <li className="footer-bottom-item" key={index}>
+                                    <a target='_blank' href={item.href} className="footer-bottom-link">{item.label}</a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
