@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { programs } from '../../data/programs'
 import ProgramBlock from './ProgramBlock'
+import "./programBlock.scss"
 
 const HeroPrograms = () => {
   const [activeIndex, setActiveIndex] = useState(1)

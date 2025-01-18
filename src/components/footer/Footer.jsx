@@ -46,7 +46,7 @@ const Footer = () => {
                         <div className="footer-top-block">
                             <ul className="footer-menu">
                                 {footerMenu.map((item, index) => (
-                                    <li className="footer-item">
+                                    <li className="footer-item" key={index}>
                                     <a target='_blank' href={item.href} className="footer-link">{item.label}</a>
                                 </li>
                                 ))}

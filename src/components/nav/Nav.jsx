@@ -24,14 +24,14 @@ const Nav = ({isMenuOpen}) => {
             path:"/contact"
         },
     ]
+    
     return (
         <>
             <nav className={isMenuOpen ? "nav active" : "nav"}>
                 <ul className="menu">
-
                     {navItems.map((item, index) => (
                         <li className="item" key={index}>
-                            <Link to={item.path}/>{item.name}<Link/>
+                            <Link className='link' to={item.path}>{item.name}</Link>
                     </li>
                     ))}
                 </ul>

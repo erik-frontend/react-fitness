@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { logo, cart } from '../../assets/img/index';
+import { logoBlue, cartBlack } from '../../assets/img/index';
 import Nav from '../nav/Nav';
+import { IoIosMenu, IoIosClose } from "react-icons/io";
 
 const MainHeader = () => {
 
@@ -15,13 +16,13 @@ const MainHeader = () => {
             <header className="header">
                 <div className="header-fixed">
                     <div className="header-navbar container">
-                        <a href="" className="header-logo"><img src={logo} alt="logo" /></a>
+                        <a href="" className="header-logo"><img src={logoBlue} alt="logo" /></a>
                         <Nav
                             isMenuOpen={isMenuOpen}
                         />
                         <div className="header-block">
                             <a href="" className="cart">
-                                <img src={cart} alt="cart" />
+                                <img src={cartBlack} alt="cart" />
                             </a>
                             <div className="acuont">
                                 <a href="" className="link" id="login">Log In</a>

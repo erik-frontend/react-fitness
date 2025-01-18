@@ -19,6 +19,9 @@ import arowBigRight from "./arrow-big-right.svg"
 import arowLeft from "./arrow-left.svg"
 import arowRight from "./arrow-right.svg"
 import footerLogo from "./footer-logo.svg"
+import logoBlue from "./Logo-blue.svg"
+import cartBlack from "./cart-black.svg"
+
 
 
 
@@ -45,4 +48,6 @@ export {
     arowLeft,
     arowRight,
     footerLogo,
+    logoBlue,
+    cartBlack,
 }
