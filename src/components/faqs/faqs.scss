@@ -98,6 +98,10 @@
       &:not(:last-child) {
         margin-bottom: 15px;
       }
+
+      &.active .tab-content {
+        display: block;
+      }
     }
   
     .tab-content {
