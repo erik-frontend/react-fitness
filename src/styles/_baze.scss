@@ -71,13 +71,17 @@
     letter-spacing: 0.005em;
     background: #F9F9FB;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     min-width: 320px;
   
     &.hiden {
       overflow-y: hidden;
     }
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   
   main {

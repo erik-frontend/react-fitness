@@ -6,11 +6,9 @@ import Review from '../components/review/Review'
 const Programs = () => {
   return (
     <>
-    <main>
         <Program/>
         <Faqs/>
         <Review/>
-    </main>
     </>
   )
 }

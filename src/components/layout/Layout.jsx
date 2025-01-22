@@ -11,7 +11,7 @@ export const Layout = () => {
     return (
         <>
             {!isHomePage && <MainHeader/>}
-            <Outlet />
+            <main><Outlet /></main>
             <Footer />
         </>
     )

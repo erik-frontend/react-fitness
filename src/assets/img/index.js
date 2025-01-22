@@ -21,6 +21,10 @@ import arowRight from "./arrow-right.svg"
 import footerLogo from "./footer-logo.svg"
 import logoBlue from "./Logo-blue.svg"
 import cartBlack from "./cart-black.svg"
+import biceps from "./fitness-biceps.svg"
+import timer from "./timer.svg"
+import dumbbell from "./fitness-dumbbell.svg"
+
 
 
 
@@ -50,4 +54,7 @@ export {
     footerLogo,
     logoBlue,
     cartBlack,
+    biceps,
+    timer,
+    dumbbell,
 }
