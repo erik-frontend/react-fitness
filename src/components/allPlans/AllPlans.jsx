@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
 import { tableRows, plans } from '../../data/allPlans'
 import "./allPlans.scss"
+import { dataTable } from '../../data/dataTable'
 
 
 const AllPlans = () => {
 
-     const [isActive, setIsActive] = useState(1)
-    console.log(isActive);
-    
-        const handlePlanClick = index => {
-            setIsActive(index)
-            
-            
-        }
+    const [isActive, setIsActive] = useState(1)
+
+    const [activeTable, setActiveTable] = useState(1)
+
+    console.log(`${activeTable} - ${isActive}`);
+
+
+    const handlePlanClick = index => {
+        setIsActive(index)
+        setActiveTable(index)
+    }
+
 
     return (
         <>
@@ -35,207 +40,25 @@ const AllPlans = () => {
                         ))}
                     </div>
                     <div className="plan-table">
-                        <table className="table">
-                            <tbody>
-                                <tr>
-                                    <th>Overview</th>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">classNamees per month</td>
-                                    <td className="">1</td>
-                                    <td className="">8</td>
-                                    <td className="">20</td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Access to online classNamees</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Health & fitness guides</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full Warmup guide</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Access video Link</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full diet plan</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Nutritional support</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full customize plan</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Daily progress check up</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">All Intermediate package</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table className="table active">
-                            <tbody>
-                                <tr>
-                                    <th>Overview</th>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">classNamees per month</td>
-                                    <td className="">1</td>
-                                    <td className="">8</td>
-                                    <td className="">20</td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Access to online classNamees</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Health & fitness guides</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full Warmup guide</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Access video Link</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full diet plan</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Nutritional support</td>
-                                    <td className="checked"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full customize plan</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Daily progress check up</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">All Intermediate package</td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                    <td className="checked-error"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table className="table">
-                            <tbody>
-                                <tr>
-                                    <th>Overview</th>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">classNamees per month</td>
-                                    <td className="">1</td>
-                                    <td className="">8</td>
-                                    <td className="">20</td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Access to online classNamees</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Health & fitness guides</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full Warmup guide</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Access video Link</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full diet plan</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Nutritional support</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Full customize plan</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">Daily progress check up</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                                <tr>
-                                    <td className="plan-table-title">All Intermediate package</td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                    <td className="checked"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        {dataTable
+                            .filter(table => table.id === activeTable)
+                            .map((item, index) => (
+                                <table className={`table ${isActive === index ? "active" : ""}`} key={index}>
+                                    <tbody>
+                                        <tr>
+                                            <th>Overview</th>
+                                        </tr>
+                                        {item.rows.map((row, rowIndex) => (
+                                            <tr key={rowIndex}>
+                                                <td className="plan-table-title">{row.title}</td>
+                                                {row.values.map((value, callIndex) => (
+                                                    <td key={callIndex} className={value}>{!isNaN(value) ? value : null}</td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            ))}
                     </div>
                 </div>
             </section>

@@ -24,6 +24,7 @@ import cartBlack from "./cart-black.svg"
 import biceps from "./fitness-biceps.svg"
 import timer from "./timer.svg"
 import dumbbell from "./fitness-dumbbell.svg"
+import errorChecked from "./error-checked.svg"
 
 
 
@@ -57,4 +58,5 @@ export {
     biceps,
     timer,
     dumbbell,
+    errorChecked,
 }
