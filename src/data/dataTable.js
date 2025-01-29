@@ -2,7 +2,7 @@ import { checkedIconActive, errorChecked } from "../assets/img"
 
 export const dataTable = [
         {
-          id: 1,
+          id: 0,
           title: "Basic Plan",
           rows: [
             { title: "Classes per month", values: [1, 8, 20] },
@@ -18,7 +18,7 @@ export const dataTable = [
           ],
         },
         {
-          id: 2,
+          id: 1,
           title: "Pro Plan",
           rows: [
             { title: "Classes per month", values: [2, 7, 18] },
@@ -34,7 +34,7 @@ export const dataTable = [
           ],
         },
         {
-          id: 3,
+          id: 2,
           title: "Premium Plan",
           rows: [
             { title: "Classes per month", values: [3, 6, 17] },

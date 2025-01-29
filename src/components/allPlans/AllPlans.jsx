@@ -43,7 +43,7 @@ const AllPlans = () => {
                         {dataTable
                             .filter(table => table.id === activeTable)
                             .map((item, index) => (
-                                <table className={`table ${isActive === index ? "active" : ""}`} key={index}>
+                                <table className={`table ${activeTable === item.id ? "active" : ""}`} key={index}>
                                     <tbody>
                                         <tr>
                                             <th>Overview</th>
