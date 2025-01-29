@@ -1,7 +1,7 @@
 import React from 'react'
 import AllPlans from '../components/allPlans/AllPlans'
 import Review from '../components/review/Review'
-const Membership = () => {
+const MembershipPages = () => {
   return (
     <>
         <AllPlans/>
@@ -10,4 +10,4 @@ const Membership = () => {
   )
 }
 
-export default Membership
+export default MembershipPages

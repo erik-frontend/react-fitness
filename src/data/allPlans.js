@@ -6,6 +6,7 @@ export const plans = [
         title: "Free Plan",
         text: "It’s a long established fact that a reader will be distracted by the readable content",
         link: "#",
+        btnText: "Puchase Plan",
         isActive: false,
     },
     {
@@ -14,6 +15,7 @@ export const plans = [
         title: "Basic Plan",
         text: "It’s a long established fact that a reader will be distracted by the readable content",
         link: "program.html",
+        btnText: "Puchase Plan",
         isActive: true,
     },
     {
@@ -22,6 +24,7 @@ export const plans = [
         title: "Professional Plan",
         text: "It’s a long established fact that a reader will be distracted by the readable content",
         link: "#",
+        btnText: "Puchase Plan",
         isActive: false,
     },
 ]

@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import { tableRows, plans } from '../../data/allPlans'
+import "./allPlans.scss"
 
 
 const AllPlans = () => {
 
-    const [isActive, setIsActive] = useState(false)
+     const [isActive, setIsActive] = useState(1)
+    console.log(isActive);
+    
+        const handlePlanClick = index => {
+            setIsActive(index)
+            
+            
+        }
 
     return (
         <>
@@ -15,14 +23,14 @@ const AllPlans = () => {
                         Find Your</h2>
                     <div className="plans">
                         {plans.map((item, index) => (
-                            <div className={`plan-block ${isActive ? "active" : ""}`} key={index}>
+                            <div className={`plan-block ${isActive === index ? "active" : ""}`} key={index} onClick={() => handlePlanClick(index)}>
                                 <div className="plan-prise">
                                     <span className="prise">{item.price}</span>
                                     <span className="month">{item.month}</span>
                                 </div>
                                 <span className="plan-title">{item.title}</span>
                                 <p className="plan-text">{item.text}</p>
-                                <a href="" className="plan-link">{item.link}</a>
+                                <a href="" className="plan-link">{item.btnText}</a>
                             </div>
                         ))}
                     </div>
