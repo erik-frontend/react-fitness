@@ -1231,6 +1231,8 @@
     background: #BCFF5E;
     margin: auto;
   }
+
+  /* End program */
   
   .select2-results__option {
     color: #AEAEB2;
@@ -1745,6 +1747,8 @@
   .contact .reserve-item:nth-child(2) {
     background-image: url(../assets/img/sms.svg);
   }
+
+  /* End contact */
   
   .pop-up {
     position: fixed;

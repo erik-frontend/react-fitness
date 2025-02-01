@@ -1,6 +1,7 @@
 
 export const plans = [
     {
+        id: 1,
         price: "$0",
         month: "/Month",
         title: "Free Plan",
@@ -10,6 +11,7 @@ export const plans = [
         isActive: false,
     },
     {
+        id: 2,
         price: "$149",
         month: "/Month",
         title: "Basic Plan",
@@ -19,6 +21,7 @@ export const plans = [
         isActive: true,
     },
     {
+        id: 3,
         price: "$289.00",
         month: "/Month",
         title: "Professional Plan",

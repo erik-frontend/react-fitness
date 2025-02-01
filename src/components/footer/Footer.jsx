@@ -2,7 +2,7 @@ import React from 'react'
 import "./footer.scss"
 import { footerLogo } from '../../assets/img'
 import FooterSocial from './FooterSocial'
-
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 
@@ -19,16 +19,16 @@ const Footer = () => {
 
     const footerMenu = [
         {
-            href: "#",
-            label: "program"
+            href: "/program",
+            label: "Program"
         },
         {
-            href: "#",
+            href: "/payment",
             label: "Payment"
         },
         {
-            href: "#",
-            label: "about us"
+            href: "/about-us",
+            label: "About us"
         },
     ]
 
@@ -47,7 +47,7 @@ const Footer = () => {
                             <ul className="footer-menu">
                                 {footerMenu.map((item, index) => (
                                     <li className="footer-item" key={index}>
-                                    <a target='_blank' href={item.href} className="footer-link">{item.label}</a>
+                                    <Link to={item.href} className="footer-link">{item.label}</Link>
                                 </li>
                                 ))}
                             </ul>

@@ -1,0 +1,138 @@
+.contact {
+    padding: 74px 0 120px;
+  
+    &-title {
+      color: #1C1C1E;
+      font-size: 72px;
+      font-weight: 500;
+      line-height: 80px;
+      letter-spacing: 0.36px;
+  
+      span {
+        font-family: "GeneralSans-Regular";
+        font-size: 72px;
+        line-height: 80px;
+        font-weight: 400;
+      }
+    }
+  
+    &-subtitle {
+      color: #636366;
+      font-family: "GeneralSans-Regular";
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      letter-spacing: 0.08px;
+      width: 462px;
+      padding-bottom: 32px;
+    }
+  
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 80px;
+    }
+  
+    &-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 721px;
+      width: 100%;
+      gap: 24px;
+  
+      label {
+        display: flex;
+        flex-direction: column;
+        color: #1C1C1E;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.07px;
+        gap: 8px;
+      }
+  
+      input {
+        font-size: 16px;
+        border-radius: 24px;
+        border: 1px solid #FFFFFF;
+        background: #FFFFFF;
+        padding: 16px 14px;
+        color: #AEAEB2;
+      }
+  
+      .message {
+        font-size: 16px;
+        height: 162px;
+        padding: 16px;
+        resize: none;
+        border: 1px solid #FFFFFF;
+        background: #FFFFFF;
+        color: #AEAEB2;
+        border-radius: 8px;
+      }
+    }
+  
+    &-btn {
+      margin-top: 24px;
+      width: 191px;
+      margin-left: auto;
+      border-radius: 24px;
+      padding: 16px 0;
+      background: #BCFF5E;
+      text-align: center;
+      font-size: 16px;
+    }
+  
+    .reserve {
+      max-width: 399px;
+      width: 100%;
+      padding: 24px;
+      color: #1C1C1E;
+      background: #FFFFFF;
+  
+      &-title {
+        font-family: "GeneralSans-Semibold";
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+        display: block;
+        color: #1C1C1E;
+        letter-spacing: 0.09px;
+        margin-bottom: 8px;
+      }
+  
+      &-subtitle {
+        color: var(--grayscale-60, #636366);
+        font-weight: 400;
+        letter-spacing: 0.08px;
+        margin-bottom: 32px;
+      }
+  
+      &-list {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+  
+      &-item {
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 60px;
+        font-size: 16px;
+        line-height: 48px;
+  
+        &:first-child {
+          background-image: url(../../assets/img/phone.svg);
+        }
+  
+        &:nth-child(2) {
+          background-image: url(../../assets/img/sms.svg);
+        }
+  
+        &:last-child {
+          background-image: url(../../assets/img/location.svg);
+        }
+      }
+    }
+  }
+  

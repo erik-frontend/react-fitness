@@ -6,16 +6,16 @@ import { dataTable } from '../../data/dataTable'
 
 const AllPlans = () => {
 
-    const [isActive, setIsActive] = useState(1)
+    const [isActive, setIsActive] = useState(2)
 
-    const [activeTable, setActiveTable] = useState(1)
+    const [activeTable, setActiveTable] = useState(2)
 
     console.log(`${activeTable} - ${isActive}`);
 
 
-    const handlePlanClick = index => {
-        setIsActive(index)
-        setActiveTable(index)
+    const handlePlanClick = id => {
+        setIsActive(id)
+        setActiveTable(id)
     }
 
 
@@ -28,7 +28,7 @@ const AllPlans = () => {
                         Find Your</h2>
                     <div className="plans">
                         {plans.map((item, index) => (
-                            <div className={`plan-block ${isActive === index ? "active" : ""}`} key={index} onClick={() => handlePlanClick(index)}>
+                            <div className={`plan-block ${isActive === item.id ? "active" : ""}`} key={item.id} onClick={() => handlePlanClick(item.id)}>
                                 <div className="plan-prise">
                                     <span className="prise">{item.price}</span>
                                     <span className="month">{item.month}</span>
@@ -43,7 +43,7 @@ const AllPlans = () => {
                         {dataTable
                             .filter(table => table.id === activeTable)
                             .map((item, index) => (
-                                <table className={`table ${activeTable === item.id ? "active" : ""}`} key={index}>
+                                <table className={`table ${activeTable === item.id ? "active" : ""}`} key={item.id}>
                                     <tbody>
                                         <tr>
                                             <th>Overview</th>

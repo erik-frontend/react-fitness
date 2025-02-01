@@ -25,6 +25,7 @@ import biceps from "./fitness-biceps.svg"
 import timer from "./timer.svg"
 import dumbbell from "./fitness-dumbbell.svg"
 import errorChecked from "./error-checked.svg"
+import alarm from "./alarm.svg"
 
 
 
@@ -59,4 +60,6 @@ export {
     timer,
     dumbbell,
     errorChecked,
+    alarm,
+    
 }
