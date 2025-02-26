@@ -10,18 +10,14 @@ const AllPlans = () => {
 
     const [activeTable, setActiveTable] = useState(2)
 
-    console.log(`${activeTable} - ${isActive}`);
-
-
     const handlePlanClick = id => {
-        setIsActive(id)
         setActiveTable(id)
+        setIsActive(id)
     }
 
-
-    return (
-        <>
-            <section className="allplans">
+  return (
+    <>
+         <section className="allplans">
                 <div className="container">
                     <span className="inner-subtitle">Membership</span>
                     <h2 className="inner-title allplans-title">Compare Our Plane and
@@ -43,7 +39,7 @@ const AllPlans = () => {
                         {dataTable
                             .filter(table => table.id === activeTable)
                             .map((item, index) => (
-                                <table className={`table ${activeTable === item.id ? "active" : ""}`} key={item.id}>
+                                <table className={`table ${activeTable === item.id ? "active" : ""}`} key={index}>
                                     <tbody>
                                         <tr>
                                             <th>Overview</th>
@@ -62,8 +58,8 @@ const AllPlans = () => {
                     </div>
                 </div>
             </section>
-        </>
-    )
+    </>
+  )
 }
 
 export default AllPlans

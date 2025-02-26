@@ -1,76 +1,78 @@
 .about-me {
-    padding-bottom: 0;
-  
-    .hero-midle {
-      flex-direction: column;
-      align-items: center;
-      padding: 79px 0 0;
-      background: transparent;
-    }
-  
-    .hero-content {
-      max-width: 100%;
-      display: flex;
-      justify-content: space-between;
-      gap: 50px;
-      align-items: flex-start;
-    }
-  
-    &-hero {
-      max-width: 485px;
-      width: 100%;
-    }
-  
-    .hero-subtitle {
-      color: #BCFF5E;
-      font-size: 14px;
-      line-height: 22px;
-      letter-spacing: 0.07px;
-      border-radius: 20px;
-      border: 1px solid #BCFF5E;
-      padding: 8px 0;
-      width: 97px;
+  padding-bottom: 0;
+
+  .hero-midle {
+    flex-direction: column;
+    align-items: center;
+    padding: 79px 0 0;
+    background: transparent;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+  }
+
+  &-hero {
+    max-width: 485px;
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    color: #BCFF5E;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.07px;
+    border-radius: 20px;
+    border: 1px solid #BCFF5E;
+    padding: 8px 0;
+    width: 97px;
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .hero-title {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+  }
+
+  .hero-story {
+    padding-top: 50px;
+    max-width: 532px;
+    width: 100%;
+
+    span {
       display: block;
-      margin-bottom: 12px;
-      text-align: center;
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.12px;
     }
-  
-    .hero-title {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 6px;
+
+    p {
+      color: #D1D1D6;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0.09px;
     }
-  
-    .hero-story {
-      padding-top: 50px;
-      max-width: 532px;
-      width: 100%;
-  
-      span {
-        display: block;
-        margin-bottom: 16px;
-        font-size: 24px;
-        line-height: 32px;
-        letter-spacing: 0.12px;
-      }
-  
-      p {
-        color: #D1D1D6;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 0.09px;
-      }
-    }
-  
+  }
+
+  .hero-stats-container {
     .rate {
       width: 595px;
       background: url(../../assets/img/aboutme-img.png) no-repeat center bottom;
       height: 513px;
       margin-top: -40px;
     }
-  
-    .rate-muscle, .rate-heart {
+
+    .rate-muscle,
+    .rate-heart {
       padding: 20px;
       width: 213px !important;
       border-radius: 12px;
@@ -78,7 +80,7 @@
       display: flex;
       gap: 8px;
       align-items: flex-start;
-  
+
       .title {
         letter-spacing: 0.16px;
         font-family: "GeneralSans-Medium";
@@ -87,7 +89,7 @@
         font-weight: 500;
         margin: 0 0 10px 0;
       }
-  
+
       .text {
         font-size: 14px;
         font-weight: 400;
@@ -96,41 +98,66 @@
         font-family: "GeneralSans-Regular";
       }
     }
-  
-    .rate-muscle {
-      right: -50px;
-      top: 40px;
-    }
-  
-    .rate-heart {
-      left: -80px;
-      bottom: 90px;
-    }
-  
-    .reverse {
-      margin-bottom: 120px;
-    }
-  
-    .offer-content {
-      max-width: 473px;
-      padding: 64px 40px;
-  
-      .title {
-        margin: 12px 0 24px;
-      }
-    }
-  
-    .offer-img {
-      max-width: 631px;
-    }
-  
-    .offer-content-text {
-      color: #1C1C1E;
-      font-family: "GeneralSans-Medium";
-      font-size: 18px;
-      line-height: 26px;
-      font-weight: 500;
-      letter-spacing: 0.09px;
+  }
+
+
+  .rate-muscle {
+    right: -50px;
+    top: 40px;
+  }
+
+  .rate-heart {
+    left: -80px;
+    bottom: 90px;
+  }
+
+  .reverse {
+    margin-bottom: 120px;
+  }
+
+  .offer-title {
+    font-size: 48px;
+    line-height: 56px;
+    text-transform: capitalize;
+    max-width: 582px;
+    width: 100%;
+    color: #1C1C1E;
+    text-align: center;
+    margin: 0 auto 16px auto;
+  }
+
+  .offer-subtitle {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: #6e6e6e;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 525px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 56px;
+  }
+
+  .offer-content {
+    max-width: 473px;
+    padding: 64px 40px;
+
+    .title {
+      margin: 12px 0 24px;
     }
   }
-  
+
+  .offer-img {
+    max-width: 631px;
+  }
+
+  .offer-content-text {
+    color: #1C1C1E;
+    font-family: "GeneralSans-Medium";
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    letter-spacing: 0.09px;
+  }
+}

@@ -1,63 +1,73 @@
 .hero-program {
-    display: flex;
+  display: flex;
+  // background: #FFFFFF;
+  box-shadow: 64px 64px 80px rgba(8, 23, 45, 0.16);
+  border-radius: 20px;
+
+  @media (max-width: 980px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .program-block {
+    width: 291px;
+    padding: 24px;
+    cursor: pointer;
+    transition: 0.3s linear;
     background: #FFFFFF;
-    box-shadow: 64px 64px 80px rgba(8, 23, 45, 0.16);
-    border-radius: 20px;
 
     @media (max-width: 980px) {
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding: 20px 0;
+      box-shadow: 0 12px 10px rgba(233, 235, 237, 0.5490196078);
     }
 
-    .program-block {
-      width: 291px;
-      padding: 24px;
-      cursor: pointer;
-      transition: 0.3s linear;
-      background: #FFFFFF;
+    &:nth-child(1) {
+      border-radius: 20px 0 0 20px;
+    }
 
-      @media (max-width: 980px) {
-        box-shadow: 0 12px 10px rgba(233, 235, 237, 0.5490196078);
-      }
+    &:nth-child(3) {
+      border-radius: 0 20px 20px 0;
+    }
 
-      &.active {
-        background-color: #BCFF5E;
-      }
+    &.active {
+      background-color: #BCFF5E;
 
-      &:first-child {
-        border-radius: 20px 0 0 20px;
-      }
+      // &:first-child {
+      //   border-radius: 20px 0 0 20px;
+      // }
 
-      &:last-child {
-        border-radius: 0 20px 20px 0;
-      }
+      // &:last-child {
+      //   border-radius: 0 20px 20px 0;
+      // }
+    }
 
-      .program-title {
-        display: block;
-        font-size: 20px;
-        line-height: 28px;
-        color: #1C1C1E;
-        margin: 24px 0 12px;
-      }
 
-      .program-text {
-        color: #636366;
-        font-family: "GeneralSans-Regular";
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400;
-        margin-bottom: 24px;
-      }
 
-      .program-link {
-        display: block;
-        font-size: 14px;
-        line-height: 22px;
-        color: #1C1C1E;
-        width: 98px;
-        background: url(../../assets/img/arow-icon.svg) no-repeat right center;
-      }
+    .program-title {
+      display: block;
+      font-size: 20px;
+      line-height: 28px;
+      color: #1C1C1E;
+      margin: 24px 0 12px;
+    }
+
+    .program-text {
+      color: #636366;
+      font-family: "GeneralSans-Regular";
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    .program-link {
+      display: block;
+      font-size: 14px;
+      line-height: 22px;
+      color: #1C1C1E;
+      width: 98px;
+      background: url(../../assets/img/arow-icon.svg) no-repeat right center;
     }
   }
+}

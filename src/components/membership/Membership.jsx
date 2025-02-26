@@ -3,6 +3,7 @@ import MembershipPlan from './MembershipPlan'
 import "./membership.scss"
 import { membershipPlan as plans } from '../../data/membershipPlan'
 
+
 const Membership = () => {
 
     const [isActive, setIsActive] = useState(1)
@@ -19,7 +20,7 @@ const Membership = () => {
                     <h2 className="inner-title membership-title">Crushing your health and fitness goals starts here...</h2>
                     <div className="membership-wrapper">
                         {plans.map((plan, index) => (
-                            <MembershipPlan 
+                            <MembershipPlan
                                 key={index}
                                 {...plan}
                                 isActive={isActive === index}

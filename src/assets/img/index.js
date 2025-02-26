@@ -26,6 +26,12 @@ import timer from "./timer.svg"
 import dumbbell from "./fitness-dumbbell.svg"
 import errorChecked from "./error-checked.svg"
 import alarm from "./alarm.svg"
+import videoSquare from "./video-square.svg"
+import star from "./star-shining.svg"
+import aboutMeImgOne from "./img-1.jpg"
+import aboutMeImgTwo from "./img-2.jpg"
+import aboutMeImgThree from "./img-3.jpg"
+import popUpLogo from "./logo-popup.svg"
 
 
 
@@ -61,5 +67,10 @@ export {
     dumbbell,
     errorChecked,
     alarm,
-    
+    videoSquare,
+    star,
+    aboutMeImgOne,
+    aboutMeImgTwo,
+    aboutMeImgThree,
+    popUpLogo,
 }
