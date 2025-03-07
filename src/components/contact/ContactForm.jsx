@@ -1,10 +1,16 @@
 import React from 'react'
 import { formFilds } from '../../data/contactData'
+import { motion } from 'motion/react'
+import { slideIn } from '../../utils/animations'
 
 const ContactForm = () => {
     return (
         <>
-            <form className="contact-form form">
+            <motion.form 
+            initial="hidden"
+            whileInView="visible"
+            variants={slideIn()}
+            className="contact-form form">
                 {formFilds.map((fild, index) => (
                     <label key={index}>{fild.label}
                         <input type={fild.type} placeholder={fild.placeholder} />
@@ -14,7 +20,7 @@ const ContactForm = () => {
                     <textarea className="message" placeholder="Write your message..."></textarea>
                 </label>
                 <button className="contact-btn btn">Send Message</button>
-            </form>
+            </motion.form>
         </>
     )
 }

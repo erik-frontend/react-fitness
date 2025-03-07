@@ -4,6 +4,7 @@ import HeroContent from './HeroContent'
 import HeroStats from './HeroStats'
 import { offerWrapper } from '../../data/offer-wrapper'
 import Header from '../header/Header'
+import Review from '../review/Review'
 
 const AboutUs = () => {
     return (
@@ -38,6 +39,7 @@ const AboutUs = () => {
                     ))}
                 </div>
             </section>
+            <Review/>
         </>
     )
 }

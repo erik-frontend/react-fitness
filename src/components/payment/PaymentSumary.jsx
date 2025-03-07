@@ -1,11 +1,17 @@
 import React from 'react'
 import { featuresList } from '../../data/featuresList'
 import CustomSelect from '../program/CustomSelect'
+import { motion } from 'motion/react'
+import { slideInReverse } from '../../utils/animations'
 
 const PaymentSumary = () => {
     return (
         <>
-            <div className="payment-reserve">
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={slideInReverse()}
+                className="payment-reserve">
                 <div className="price-permonth">
                     <span className="permonth-number">$149.00</span>
                     <span className="per-month-text">/Month</span>
@@ -26,9 +32,9 @@ const PaymentSumary = () => {
                 </div>
                 <div>
                     <span className="select-title">Package Duration</span>
-                    <CustomSelect/>
+                    <CustomSelect />
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }

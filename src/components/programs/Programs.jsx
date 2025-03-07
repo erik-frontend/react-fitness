@@ -1,6 +1,8 @@
 import React from 'react'
-import HeroPrograms from '../heroSection/HeroPrograms'
 import "./programs.scss"
+import ProgramsProgram from './ProgramsProgram'
+import { motion } from 'motion/react'
+import { slideInFromTop } from '../../utils/animations'
 
 const Program = () => {
   return (
@@ -8,8 +10,12 @@ const Program = () => {
     <section className="programs">
             <div className="container">
                 <span className="inner-subtitle">Programs</span>
-                <h2 className="inner-title programs-title">Browse Our Available Programs</h2>
-                <HeroPrograms/>
+                <motion.h2 className="inner-title programs-title"
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={slideInFromTop()}
+                >Browse Our Available Programs</motion.h2>
+                <ProgramsProgram/>
             </div>
         </section>
     </>

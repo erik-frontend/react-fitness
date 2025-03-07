@@ -10,7 +10,7 @@ const OfferContent = ({ icon, title, listItems, buttonText, checked, index }) =>
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
                 variants={slideInReverse(0, index)}
                 className="offer-content">
                 <figure className="offer-icon">

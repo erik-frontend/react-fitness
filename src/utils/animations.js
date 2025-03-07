@@ -2,7 +2,15 @@ export const fadeInTitle = (delay = 0) => ({
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { duration: 0.5, delay: delay, ease: "easeOut" },
+        transition: { duration: 0.2, delay: delay, ease: "easeOut" }, // поставил побольше длительность чтобы на странице трейнинг лучше отображалось если надо можно поменять обратно
+    },
+});
+
+export const fadeInTrainingTitle = (delay = 0) => ({
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { duration: 0.9, delay: delay, ease: "easeOut" }, 
     },
 });
 
@@ -95,10 +103,18 @@ export const programAnimate = (index) => ({
         scale: 1,
         opacity: 1,
         transition: {
-            delay: index * 0.2,
+            delay: index * 0.2, 
             duration: 0.5,
             ease: "easeOut",
         },
     },
 });
 
+export const slideInFromDown = (delay = 0) => ({
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.9, delay: delay, ease: "easeOut" },
+    },
+});

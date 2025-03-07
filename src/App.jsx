@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigate } from "react-router-dom"
-import { HomePage, Programs, Trainers, MembershipPages, ContactPage, ProgramPage} from "./pages"
+import { HomePage, Programs, Trainers, MembershipPages, ContactPage, ProgramPage, PaymentPage, AboutUsPage} from "./pages"
 import { Layout } from "./components/layout/Layout"
 import "./styles/main.scss"
 
@@ -15,6 +15,8 @@ function App() {
         <Route path="merbership" element={<MembershipPages />}  />
         <Route path="contact" element={<ContactPage />}  />
         <Route path="program" element={<ProgramPage />}  />
+        <Route path="payment" element={<PaymentPage />}  />
+        <Route path="about-us" element={<AboutUsPage />}  />
       </Route>
     </Routes>
   )

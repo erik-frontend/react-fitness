@@ -1,6 +1,9 @@
 import React from 'react'
 import { features, trainingDetales, details } from '../../data/treaners'
 import "./training.scss"
+import { motion } from 'motion/react'
+import { fadeInTrainingTitle, programAnimate, slideInFromRight } from '../../utils/animations'
+import TrainingText from "./TrainingText"
 
 const Training = () => {
 
@@ -8,14 +11,26 @@ const Training = () => {
         <>
             <section className="trainning">
                 <div className="container">
-                    <h1 className="trainning-title">Personal<span>Training</span></h1>
-                    <span className="trainning-subtitle">It’s a long estabilished fact that a reader will be distracted by the
-                        readable content</span>
+                    <motion.h1 className="trainning-title"
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeInTrainingTitle(0.3)}
+                    >Personal<span>Training</span></motion.h1>
+                    <motion.span
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeInTrainingTitle(0.6)}
+                        className="trainning-subtitle">It’s a long estabilished fact that a reader will be distracted by the
+                        readable content</motion.span>
                     <div className="trainning-wrapper">
                         <div className="trainning-content">
                             <div className="trainning-features">
                                 {features.map((item, index) => (
-                                    <div className="features-block" key={index}>
+                                    <motion.div
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        variants={fadeInTrainingTitle(0.9)}
+                                        className="features-block" key={index}>
                                         <figure>
                                             <img src={item.img} alt={item.alt} />
                                         </figure>
@@ -23,7 +38,7 @@ const Training = () => {
                                             <li>{item.number}</li>
                                             <li>{item.text}</li>
                                         </ul>
-                                    </div>
+                                    </motion.div>
                                 ))}
 
                             </div>
@@ -33,13 +48,14 @@ const Training = () => {
                                     poster="../../assets/img/video.jpg"></video>
                             </div>
                             {trainingDetales.map((item, index) => (
-                                <div key={index}>
-                                    <h2>{item.title}</h2>
-                                    <p className="trainning-text">{item.text}</p>
-                                </div>
+                                <TrainingText key={index} item={item} index={index} />
                             ))}
                         </div>
-                        <div className="trainning-detales">
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={slideInFromRight()}
+                            className="trainning-detales">
                             <span className="detales-title">Details Program</span>
                             <p className="detales-text">It’s a long estabilished fact that a reader will be distracted by the
                                 readable content</p>
@@ -52,7 +68,7 @@ const Training = () => {
                                 ))}
                             </ul>
                             <a href="" className="detales-btn">Book a className</a>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

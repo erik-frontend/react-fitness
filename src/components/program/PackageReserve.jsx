@@ -1,11 +1,17 @@
 import React from 'react'
 import { featuresList } from '../../data/featuresList'
 import CustomSelect from './CustomSelect'
+import { motion } from 'motion/react'
+import { slideInFromRight } from '../../utils/animations'
 
 const PackageReserve = () => {
     return (
         <>
-            <div className="package-reserve">
+            <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            variants={slideInFromRight()}
+            className="package-reserve">
                 <span className="package-title">Get your package</span>
                 <p className="package-text">Suspendisse feugiat scelerisque et, viverra urna imperdiet non
                     malesuada.</p>
@@ -26,7 +32,7 @@ const PackageReserve = () => {
                 </div>
                 <button className="btn package-btn plan-link">Purchase Now</button>
                 <button className="btn package-btn">Add to Chart</button>
-            </div>
+            </motion.div>
         </>
     )
 }

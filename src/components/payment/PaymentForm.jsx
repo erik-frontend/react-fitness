@@ -1,9 +1,15 @@
+import { motion } from 'motion/react'
 import React from 'react'
+import { slideIn } from '../../utils/animations'
 
 const PaymentForm = () => {
     return (
         <>
-            <form className="payment-form">
+            <motion.form 
+            initial="hidden"
+            whileInView="visible"
+            variants={slideIn()}
+            className="payment-form">
                 <h1 className="payment-title">Get your package</h1>
                 <div className="payment-vrapper">
                     <div className="payment-detales">
@@ -46,7 +52,7 @@ const PaymentForm = () => {
                         <button className="btn payment-btn" type="submit">Confirm and pay</button>
                     </div>
                 </div>
-            </form>
+            </motion.form>
         </>
     )
 }

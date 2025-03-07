@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { tableRows, plans } from '../../data/allPlans'
 import "./allPlans.scss"
 import { dataTable } from '../../data/dataTable'
-
+import { motion } from 'motion/react'
+import { slideInFromTop, slideIn } from '../../utils/animations'
 
 const AllPlans = () => {
 
@@ -15,13 +16,17 @@ const AllPlans = () => {
         setIsActive(id)
     }
 
-  return (
-    <>
-         <section className="allplans">
+    return (
+        <>
+            <section className="allplans">
                 <div className="container">
                     <span className="inner-subtitle">Membership</span>
-                    <h2 className="inner-title allplans-title">Compare Our Plane and
-                        Find Your</h2>
+                    <motion.h2
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={slideInFromTop()}
+                        className="inner-title allplans-title">Compare Our Plane and
+                        Find Your</motion.h2>
                     <div className="plans">
                         {plans.map((item, index) => (
                             <div className={`plan-block ${isActive === item.id ? "active" : ""}`} key={item.id} onClick={() => handlePlanClick(item.id)}>
@@ -35,7 +40,11 @@ const AllPlans = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="plan-table">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={slideIn()}
+                        className="plan-table">
                         {dataTable
                             .filter(table => table.id === activeTable)
                             .map((item, index) => (
@@ -55,11 +64,11 @@ const AllPlans = () => {
                                     </tbody>
                                 </table>
                             ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
-    </>
-  )
+        </>
+    )
 }
 
 export default AllPlans

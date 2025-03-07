@@ -1,4 +1,7 @@
+import { motion } from 'motion/react'
 import React from 'react'
+import { GiHidden } from 'react-icons/gi'
+import { slideInFromDown } from '../../utils/animations'
 
 const MembershipPlan = ({ isActive, price, duration, plan, features, onClick, listIcon, activeListIcon }) => {
     
@@ -6,7 +9,12 @@ const MembershipPlan = ({ isActive, price, duration, plan, features, onClick, li
 
     return (
         <>
-            <div className={`membership-plan ${isActive ? "active" : ""} `} onClick={onClick}>
+            <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                variants={slideInFromDown()}
+                className={`membership-plan ${isActive ? "active" : ""} `} 
+                onClick={onClick}>
                 <span className="price">{price}<small>{duration}</small></span>
                 <span className="plan">{plan}</span>
                 <ul className="membership-list">
@@ -18,7 +26,7 @@ const MembershipPlan = ({ isActive, price, duration, plan, features, onClick, li
                     ))}
                 </ul>
                 <button className="btn membership-btn">Puchase Plan</button>
-            </div>
+            </motion.div>
         </>
     )
 }

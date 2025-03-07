@@ -2,22 +2,29 @@ import React from 'react'
 import "./contact.scss"
 import ContactForm from './ContactForm'
 import ContactDetales from './ContactDetales'
+import { fadeInTrainingTitle } from '../../utils/animations'
+import { motion } from 'motion/react'
 
 const Contact = () => {
     return (
         <>
             <section className="contact">
                 <div className="container">
-                    <h1 className="contact-title">Let's get <span>in touch!</span></h1>
-                    <p className="contact-subtitle">Cras tellus ac dui at sed. Suspendisse feugiat scelerisque et, viverra urna
-                        imperdiet non malesuada.</p>
+                    <motion.h1
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeInTrainingTitle(0.3)}
+                        className="contact-title">Let's get <span>in touch!</span></motion.h1>
+                    <motion.p
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={fadeInTrainingTitle(0.6)}
+                        className="contact-subtitle">Cras tellus ac dui at sed. Suspendisse feugiat scelerisque et, viverra urna
+                        imperdiet non malesuada.</motion.p>
                     <div className="contact-wrapper">
-                        <ContactForm/>
+                        <ContactForm />
                         <div className="reserve">
-                            <span className="reserve-title">Contact Details</span>
-                            <p className="reserve-subtitle">Fill up the form and our team will get back to you with in 24 hours.
-                            </p>
-                            <ContactDetales/>
+                            <ContactDetales />
                         </div>
                     </div>
                 </div>
