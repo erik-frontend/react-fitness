@@ -4,6 +4,7 @@ import "./allPlans.scss"
 import { dataTable } from '../../data/dataTable'
 import { motion } from 'motion/react'
 import { slideInFromTop, slideIn } from '../../utils/animations'
+import PlanBlock from './PlanBlock'
 
 const AllPlans = () => {
 
@@ -29,15 +30,13 @@ const AllPlans = () => {
                         Find Your</motion.h2>
                     <div className="plans">
                         {plans.map((item, index) => (
-                            <div className={`plan-block ${isActive === item.id ? "active" : ""}`} key={item.id} onClick={() => handlePlanClick(item.id)}>
-                                <div className="plan-prise">
-                                    <span className="prise">{item.price}</span>
-                                    <span className="month">{item.month}</span>
-                                </div>
-                                <span className="plan-title">{item.title}</span>
-                                <p className="plan-text">{item.text}</p>
-                                <a href="" className="plan-link">{item.btnText}</a>
-                            </div>
+                            <PlanBlock
+                                item={item}
+                                index={index}
+                                isActive={isActive === item.id}
+                                onClick={() => handlePlanClick(item.id) }
+                                key={index}
+                            />
                         ))}
                     </div>
                     <motion.div

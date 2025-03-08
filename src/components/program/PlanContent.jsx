@@ -1,7 +1,8 @@
 import React from 'react'
 import { features, article, list } from '../../data/programData'
 import { motion } from 'motion/react'
-import { fadeInTrainingTitle, slideInFromRight } from '../../utils/animations'
+import { fadeInTrainingTitle, slideInFromRight, slideIn } from '../../utils/animations'
+import ContentFeatures from './ContentFeatures'
 
 const PlanContent = () => {
     return (
@@ -20,26 +21,18 @@ const PlanContent = () => {
                     the readable content</motion.p>
                 <div className="content-features">
                     {features.map((item, index) => (
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            variants={fadeInTrainingTitle(0.9)}
-                            className="content-features-block" key={index}>
-                            <figure>
-                                <img src={item.img} alt={item.alt} />
-                            </figure>
-                            <div className="features-block-discript">
-                                <span className="features-block-number">{item.number}</span>
-                                <span className="features-block-text">{item.text}</span>
-                            </div>
-                        </motion.div>
+                        <ContentFeatures
+                            item={item}
+                            index={index}
+                            key={index}
+                        />
                     ))}
                 </div>
                 {article.map((item, index) => (
                     <motion.article
                         initial="hidden"
                         whileInView="visible"
-                        variants={slideInFromRight()}
+                        variants={slideIn(index)}
                         className="content-article" key={index}>
                         <h2>{item.title}</h2>
                         <p>{item.text}</p>

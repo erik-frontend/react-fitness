@@ -5,6 +5,7 @@ import HeroStats from './HeroStats'
 import { offerWrapper } from '../../data/offer-wrapper'
 import Header from '../header/Header'
 import Review from '../review/Review'
+import OfferBlock from './OfferBlock'
 
 const AboutUs = () => {
     return (
@@ -24,18 +25,7 @@ const AboutUs = () => {
                     <p className="offer-subtitle">Consectetur adipiscing elit. Odio amet egestasolm dignissim eu nunc. Id
                         pulvinar enim volutpat tellus. </p>
                     {offerWrapper.map((item, index) => (
-                        <div className={`offer-wrapper ${item.id % 2 === 0 ? "reverse" : ""}`} key={index}>
-                            <div className="offer-content">
-                                <figure className="offer-icon">
-                                    <img src={item.icon} alt={item.alt} />
-                                </figure>
-                                <span className="title">{item.title}</span>
-                                <p className="offer-content-text">{item.text}</p>
-                            </div>
-                            <figure className="offer-img">
-                                <img src={item.image} alt={item.imgAlt} />
-                            </figure>
-                        </div>
+                        <OfferBlock item={item} index={index} key={index}/>
                     ))}
                 </div>
             </section>
