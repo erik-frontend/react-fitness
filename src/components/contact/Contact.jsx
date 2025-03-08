@@ -2,7 +2,7 @@ import React from 'react'
 import "./contact.scss"
 import ContactForm from './ContactForm'
 import ContactDetales from './ContactDetales'
-import { fadeInTrainingTitle } from '../../utils/animations'
+import { fadeInTrainingTitle, slideInReverse } from '../../utils/animations'
 import { motion } from 'motion/react'
 
 const Contact = () => {
@@ -23,9 +23,13 @@ const Contact = () => {
                         imperdiet non malesuada.</motion.p>
                     <div className="contact-wrapper">
                         <ContactForm />
-                        <div className="reserve">
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={slideInReverse()}
+                            className="reserve">
                             <ContactDetales />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
