@@ -4,7 +4,7 @@ import Nav from '../nav/Nav'
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import "./header.scss"
 import PopUp from '../popUp/PopUp';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,7 +35,7 @@ const Header = () => {
             <header className="header">
                 <div className="header-fixed">
                     <div className="header-navbar container">
-                        <a href="" className="header-logo"><img src={logo} alt="logo" /></a>
+                        <Link to="/" className="header-logo"><img src={logo} alt="logo" /></Link>
                         <Nav
                             isMenuOpen={isMenuOpen}
                         />

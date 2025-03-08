@@ -3,6 +3,7 @@ import { logoBlue, cartBlack } from '../../assets/img/index';
 import Nav from '../nav/Nav';
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import PopUp from '../popUp/PopUp';
+import { Link } from 'react-router-dom';
 
 const MainHeader = () => {
 
@@ -32,7 +33,7 @@ const MainHeader = () => {
             <header className="header">
                 <div className="header-fixed">
                     <div className="header-navbar container">
-                        <a href="" className="header-logo"><img src={logoBlue} alt="logo" /></a>
+                        <Link to="/" className="header-logo"><img src={logoBlue} alt="logo" /></Link>
                         <Nav
                             isMenuOpen={isMenuOpen}
                         />
