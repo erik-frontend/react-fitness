@@ -1,0 +1,20 @@
+.arrowToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    z-index: 0;
+    font-size: 55px;
+    opacity: 0;
+    transition: .3s linear;
+
+    svg {
+        fill: #9797a5;
+    }
+
+    &.active {
+        right: 20px;
+        z-index: 5;
+        opacity: 1;
+
+    }
+}

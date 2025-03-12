@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./footer.scss"
 import { footerLogo } from '../../assets/img'
 import FooterSocial from './FooterSocial'
 import { Link } from 'react-router-dom'
+import ScrollBtn from '../../ScrollBtn/ScrollBtn'
 
 const Footer = () => {
+
+    const [arrowShow, setArrowShow] = useState(false)
+
+   
+
 
     const menuItems = [
         {
@@ -75,6 +81,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
+            <ScrollBtn arrowShow={arrowShow} setArrowShow={setArrowShow}/>
         </>
     )
 }
