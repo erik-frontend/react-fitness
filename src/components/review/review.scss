@@ -115,8 +115,7 @@
         height: 8px;
         background: #e9ebed;
         transition: 0.3s linear;
-  
-       
+        z-index: 2;
       }
 
       li.slick-active button {

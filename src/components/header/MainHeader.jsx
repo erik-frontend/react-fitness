@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { logoBlue, cartBlack } from '../../assets/img/index';
 import Nav from '../nav/Nav';
 import { IoIosMenu, IoIosClose } from "react-icons/io";
@@ -21,6 +21,18 @@ const MainHeader = () => {
         setPopupState(page);
         setIsOpen(state);
     };
+
+      useEffect(() => {
+            if (isMenuOpen) {
+                document.body.classList.add('hiden');
+            } else {
+                document.body.classList.remove('hiden');
+            }
+        
+            return () => {
+                document.body.classList.remove('hiden');
+            };
+        }, [isMenuOpen]);
 
     return (
         <>
