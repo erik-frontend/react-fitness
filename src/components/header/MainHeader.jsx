@@ -3,13 +3,20 @@ import { logoBlue, cartBlack } from '../../assets/img/index';
 import Nav from '../nav/Nav';
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import PopUp from '../popUp/PopUp';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const MainHeader = () => {
 
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const [popupState, setPopupState] = useState("signUp");
+
+     useEffect(() => {
+        setIsOpen(false);
+        setIsMenuOpen(false);
+        window.scrollTo(0, 0)
+    }, [location.pathname]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -22,17 +29,17 @@ const MainHeader = () => {
         setIsOpen(state);
     };
 
-      useEffect(() => {
-            if (isMenuOpen) {
-                document.body.classList.add('hiden');
-            } else {
-                document.body.classList.remove('hiden');
-            }
-        
-            return () => {
-                document.body.classList.remove('hiden');
-            };
-        }, [isMenuOpen]);
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.classList.add('hiden');
+        } else {
+            document.body.classList.remove('hiden');
+        }
+
+        return () => {
+            document.body.classList.remove('hiden');
+        };
+    }, [isMenuOpen]);
 
     return (
         <>
@@ -59,7 +66,7 @@ const MainHeader = () => {
                             </div>
                         </div>
                         <div className="burger" onClick={toggleMenu}>
-                            {isMenuOpen ? <IoIosClose /> : <IoIosMenu />}
+                            {isMenuOpen ? <IoIosClose className={`burger-icon ${isMenuOpen ? "closingIcon" : ""}`} /> : <IoIosMenu className={`burger-icon ${isMenuOpen ? "closingIcon" : ""}`} />}
                         </div>
                     </div>
                 </div>

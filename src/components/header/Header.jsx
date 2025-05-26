@@ -5,11 +5,21 @@ import { IoIosMenu, IoIosClose } from "react-icons/io";
 import "./header.scss"
 import PopUp from '../popUp/PopUp';
 import { Link } from 'react-router-dom';
+
+import { useLocation } from 'react-router-dom';
+
 const Header = () => {
 
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const [popupState, setPopupState] = useState("signUp");
+
+    useEffect(() => {
+        setIsOpen(false);
+        setIsMenuOpen(false);
+        window.scrollTo(0, 0)
+    }, [location.pathname]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -28,7 +38,7 @@ const Header = () => {
         } else {
             document.body.classList.remove('hiden');
         }
-    
+
         return () => {
             document.body.classList.remove('hiden');
         };
