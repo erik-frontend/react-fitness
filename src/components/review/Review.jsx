@@ -19,7 +19,15 @@ const Review = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: <CustomPrevArrow isNextActive={isNextActive} setIsNextActive={setIsNextActive} />,
-        nextArrow: <CustomNextArrow isNextActive={isNextActive} setIsNextActive={setIsNextActive} />
+        nextArrow: <CustomNextArrow isNextActive={isNextActive} setIsNextActive={setIsNextActive} />,
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     };
 
     return (

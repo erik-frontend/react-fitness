@@ -61,6 +61,10 @@
     color: inherit;
     font: inherit;
   }
+
+  html {
+    overflow-x: hidden;
+  }
   
   body {
     font-family: "GeneralSans-Medium";
@@ -72,6 +76,7 @@
     background: #F9F9FB;
     min-height: 100vh;
     min-width: 320px;
+    overflow-x: hidden;
   
     &.hiden {
       overflow-y: hidden;

@@ -80,7 +80,7 @@
       transition: 0.3s linear;
   
       &.slick-next {
-        right: 42%;
+        right: 30%;
         background: url(../assets/img/arrow-right.svg) no-repeat center;
   
         &.active {
@@ -89,7 +89,7 @@
       }
   
       &.slick-prev {
-        left: 42%;
+        left: 30%;
         background: url(../assets/img/arrow-left.svg) no-repeat center;
   
         &.active {
